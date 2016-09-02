@@ -8,9 +8,9 @@ var Request = require('supertest');
 var Mockgen = require('../data/mockgen.js');
 var Parser = require('swagger-parser');
 /**
- * Test for /
+ * Test for /hello
  */
-Test('/', function (t) {
+Test('/hello', function (t) {
     var apiPath = Path.resolve(__dirname, '../config/swagger.json');
     var App = Express();
     App.use(BodyParser.json());
@@ -33,7 +33,7 @@ Test('/', function (t) {
          */
         t.test('test  get operation', function (t) {
             Mockgen().requests({
-                path: '/',
+                path: '/hello',
                 operation: 'get'
             }, function (err, mock) {
                 var request;
@@ -63,7 +63,7 @@ Test('/', function (t) {
                     t.error(err, 'No error');
                     t.ok(res.statusCode === 200, 'Ok response status');
                     var Validator = require('is-my-json-valid');
-                    var validate = Validator(api.paths['/']['get']['responses']['200']['schema']);
+                    var validate = Validator(api.paths['/hello']['get']['responses']['200']['schema']);
                     var response = res.body;
                     if (Object.keys(response).length <= 0) {
                         response = res.text;

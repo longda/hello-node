@@ -5,7 +5,7 @@
         "version": "1.0.0"
     },
     "paths": {
-        "/": {
+        "/hello": {
             "get": {
                 "responses": {
                     "200": {

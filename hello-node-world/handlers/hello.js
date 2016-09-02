@@ -1,7 +1,7 @@
 'use strict';
-var dataProvider = require('../data/.js');
+var dataProvider = require('../data/hello.js');
 /**
- * Operations on /
+ * Operations on /hello
  */
 module.exports = {
     /**

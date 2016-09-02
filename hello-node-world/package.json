@@ -2,13 +2,13 @@
     "name": "hello-node-world",
     "description": "",
     "version": "1.0.0",
-    "author": "john tester <johntester@foo.bar>",
+    "author": "dl <dl@dl.com>",
     "contributors": [],
     "repository": {
         "type": "git",
-        "url": "git://github.com/johntester/hello-node-world.git"
+        "url": "git://github.com/dl/hello-node-world.git"
     },
-    "bugs": "http://github.com/johntester/hello-node-world/issues",
+    "bugs": "http://github.com/dl/hello-node-world/issues",
     "publishConfig": {
         "registry": "https://registry.npmjs.org"
     },
